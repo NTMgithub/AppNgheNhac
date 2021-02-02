@@ -10,7 +10,7 @@ class Slider extends Component{
     render(){
         return(
             <View>
-                <Text>Slider</Text>
+                <Text>Slide</Text>
             </View>
         );
     }

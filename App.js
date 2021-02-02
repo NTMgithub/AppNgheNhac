@@ -5,9 +5,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import Header from "./src/screens/Header/Header";
-import Slider from "./src/screens/Slider/Slider";
-
+import BottomTab from "./src/screens/BottomTab/BottomTab";
 
 const widthDevice = Dimensions.get('window').width;
 const heightDevice = Dimensions.get('window').height;
@@ -16,8 +14,7 @@ class App extends Component{
   render(){
     return(
       <View style={styles.container}>
-        <Header />
-        <Slider />
+        <BottomTab />
       </View>
     );
   }
