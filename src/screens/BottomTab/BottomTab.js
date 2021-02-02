@@ -9,13 +9,11 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Header from "../Header/Header";
 import Slider from "../Slider/Slider";
 
-import BottomTabStyles from "./BottomTabStyles";
-
 const Tab = createBottomTabNavigator();
 
 function TrangChu() {
     return (
-      <View>
+      <View style={{flex: 1, flexDirection: 'column' }}>
         <Header />
         <Slider />
       </View>
