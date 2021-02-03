@@ -13,8 +13,8 @@ class Slider extends Component{
         return(
             <View style={SliderStyles.container}>
             <Swiper 
-                autoplay 
-                autoplayTimeout={5}
+                //autoplay 
+                //autoplayTimeout={5}
             >
                 <View>
                     <Image source={require('../../images/Slider/slider1.jpg')}

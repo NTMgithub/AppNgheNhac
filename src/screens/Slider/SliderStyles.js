@@ -14,7 +14,7 @@ const SliderStyles = StyleSheet.create({
     },
 
     sliderImage:{
-        width: widthDevice/1.05,
+        width: widthDevice/1.065,
         height: heightDevice/4.5,
         borderRadius: 20,
     },

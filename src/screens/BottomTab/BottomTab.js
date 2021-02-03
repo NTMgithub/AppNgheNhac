@@ -8,6 +8,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import Header from "../Header/Header";
 import Slider from "../Slider/Slider";
+import ShortcutIcons from "../ShortcutIcons/ShortcutIcons";
 
 const Tab = createBottomTabNavigator();
 
@@ -16,6 +17,7 @@ function TrangChu() {
       <View style={{flex: 1, flexDirection: 'column' }}>
         <Header />
         <Slider />
+        <ShortcutIcons />
       </View>
     );
 }
@@ -43,7 +45,7 @@ class BottomTab extends Component{
             <Tab.Navigator
                 initialRouteName="TrangChu"
                 tabBarOptions={{
-                    activeTintColor: '#e91e63',
+                    activeTintColor: '#2366FF',
                 }}
             >
                 <Tab.Screen 
@@ -55,7 +57,7 @@ class BottomTab extends Component{
                         <Image
                             source={require('../../images/home.png')}
                             style={{width: 26, height: 26 }}
-                            tintColor={focused ? '#e91e63' : 'black' }
+                            tintColor={focused ? '#2366FF' : 'black' }
                         />
                     ),
                     }}
@@ -69,7 +71,7 @@ class BottomTab extends Component{
                         <Image
                             source={require('../../images/loupe.png')}
                             style={{width: 26, height: 26}}
-                            tintColor={focused ? '#e91e63' : 'black' }
+                            tintColor={focused ? '#2366FF' : 'black' }
                         />
                     ),
                    
@@ -84,7 +86,7 @@ class BottomTab extends Component{
                         <Image
                             source={require('../../images/user.png')}
                             style={{width: 26, height: 26}}
-                            tintColor={focused ? '#e91e63' : 'black' }
+                            tintColor={focused ? '#2366FF' : 'black' }
                         />
                     ),
                     }}
