@@ -6,23 +6,10 @@ import {
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import Header from "../Header/Header";
-import Slider from "../Slider/Slider";
-import ShortcutIcons from "../ShortcutIcons/ShortcutIcons";
-import ListComponents from "../ListComponents/ListComponents";
+import Home from "../Home/Home";
 
 const Tab = createBottomTabNavigator();
 
-function TrangChu() {
-    return (
-      <View style={{flex: 1, flexDirection: 'column' }}>
-        <Header />
-        <Slider />
-        <ShortcutIcons />
-        <ListComponents />
-      </View>
-    );
-}
   
 function CaNhan() {
     return (
@@ -45,14 +32,14 @@ class BottomTab extends Component{
         return(
             <NavigationContainer>
             <Tab.Navigator
-                initialRouteName="TrangChu"
+                initialRouteName="Home"
                 tabBarOptions={{
                     activeTintColor: '#2366FF',
                 }}
             >
                 <Tab.Screen 
-                    name="TrangChu"
-                    component={TrangChu}
+                    name="Home"
+                    component={Home}
                     options={{
                     tabBarLabel: 'Trang chủ',
                     tabBarIcon: ({focused }) => (   

@@ -7,6 +7,7 @@ import {
 import ListComponentsStyles from "../ListComponents/ListComponentsStyles";
 import MainComponent from "../ListComponents/MainComponent";
 
+// data example
 const redvelvet = {
     album1:{
         imageUrl: require('../../images/playlist/redvelvetalbum.jpg'),
@@ -29,7 +30,7 @@ class ListComponents extends Component{
     render(){
         return(
             <View style={ListComponentsStyles.container}>
-                <Text style={ListComponentsStyles.TextTitle}>Red Velvet hay nhất</Text>
+                <Text style={ListComponentsStyles.TextTitle}>{this.props.titlelist}</Text>
                 <ScrollView 
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}
@@ -55,12 +56,17 @@ class ListComponents extends Component{
                         title={redvelvet.album1.title}
                         description={redvelvet.album1.description}
                     />
-                     <MainComponent 
+                    <MainComponent 
                         imageurl={redvelvet.album2.imageUrl} 
                         title={redvelvet.album2.title}
                         description={redvelvet.album2.description}
                     />
-
+                    <MainComponent 
+                        imageurl={redvelvet.album3.imageUrl} 
+                        title={redvelvet.album3.title}
+                        description={redvelvet.album3.description}
+                    />
+                
                 </ScrollView>  
             </View>
         );
