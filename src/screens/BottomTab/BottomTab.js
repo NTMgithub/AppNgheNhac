@@ -9,6 +9,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Header from "../Header/Header";
 import Slider from "../Slider/Slider";
 import ShortcutIcons from "../ShortcutIcons/ShortcutIcons";
+import ListComponents from "../ListComponents/ListComponents";
 
 const Tab = createBottomTabNavigator();
 
@@ -18,6 +19,7 @@ function TrangChu() {
         <Header />
         <Slider />
         <ShortcutIcons />
+        <ListComponents />
       </View>
     );
 }

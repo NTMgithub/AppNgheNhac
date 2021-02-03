@@ -1,37 +1,48 @@
 import React,{ Component } from "react";
 
 import { 
-    View, Text, Image, TouchableOpacity
+    View,
 } from "react-native";
 
 import ShortcutIconsStyles from "./ShortcutIconsStyles";
+import ShortcutComponent from "./ShortcutComponent";
 
+const shortcuticons = {
+    icon1:{
+        imageurl: require('../../images/musicicon.png'),
+        title: 'Nhạc mới',
+    },
+    icon2:{
+        imageurl: require('../../images/categoryicon.png'),
+        title: ' Thể loại',
+    },
+    icon3:{
+        imageurl: require('../../images/music-heart.png'),
+        title: 'Nghe nhiều',
+    },
+}
 
 class ShortcutIcons extends Component{
     render(){
         return(
             <View style={ShortcutIconsStyles.container}>
-                <TouchableOpacity>
-                    <Image source={require('../../images/musicicon.png')} 
-                        style={ShortcutIconsStyles.imageIcon}
-                    />
-                    <Text style={ShortcutIconsStyles.imageText} >Nhạc mới</Text>
-                </TouchableOpacity>
-                <TouchableOpacity >
-                    <Image source={require('../../images/categoryicon.png')} 
-                        style={ShortcutIconsStyles.imageIcon}
-                    />
-                    <Text style={ShortcutIconsStyles.imageText} > Thể loại</Text>
-                </TouchableOpacity>
-                <TouchableOpacity >
-                    <Image source={require('../../images/music-heart.png')} 
-                        style={ShortcutIconsStyles.imageIcon}
-                    />
-                    <Text style={ShortcutIconsStyles.imageText} >Nghe nhiều</Text>
-                </TouchableOpacity>
+                <ShortcutComponent 
+                    imageurl={shortcuticons.icon1.imageurl}
+                    title={shortcuticons.icon1.title}
+                />
+                <ShortcutComponent 
+                    imageurl={shortcuticons.icon2.imageurl}
+                    title={shortcuticons.icon2.title}
+                />
+                <ShortcutComponent 
+                    imageurl={shortcuticons.icon3.imageurl}
+                    title={shortcuticons.icon3.title}
+                />
+                
             </View>
         );
     }
 }
+
 
 export default ShortcutIcons;
