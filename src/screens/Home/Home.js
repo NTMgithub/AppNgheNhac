@@ -9,6 +9,7 @@ import ShortcutIcons from "../ShortcutIcons/ShortcutIcons";
 import ListComponents from "../ListComponents/ListComponents";
 import ListSongsComponent from "../ListSongsComponent/ListSongsComponent";
 
+import ArtistListComponent from "../ArtistListComponent/ArtistListComponent";
 
 class Home extends Component{
     render(){
@@ -27,7 +28,7 @@ class Home extends Component{
                 <ListComponents titlelist='Playlist thư giãn' />
                 <ListComponents titlelist='Indie Việt toàn tập' />
 
-                <ListComponents titlelist='Nghệ sĩ yêu thích' />
+                <ArtistListComponent titlelist='Nghệ sĩ yêu thích' />
             </ScrollView>
         );
     }
