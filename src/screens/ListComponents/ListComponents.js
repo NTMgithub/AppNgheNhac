@@ -11,7 +11,7 @@ import MainComponent from "../ListComponents/MainComponent";
 const redvelvet = {
     album1:{
         imageUrl: require('../../images/playlist/redvelvetalbum.jpg'),
-        title: 'Perfert Velvet',
+        title: 'Perfect Velvet',
         description: 'Album hay nhất trong năm của Red Velvet...',
     },
     album2:{
