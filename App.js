@@ -5,7 +5,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import BottomTab from "./src/screens/BottomTab/BottomTab";
+import Navigation from "./src/screens/Navigation/Navigation";
 
 const widthDevice = Dimensions.get('window').width;
 const heightDevice = Dimensions.get('window').height;
@@ -13,9 +13,9 @@ const heightDevice = Dimensions.get('window').height;
 class App extends Component{
   render(){
     return(
-      <View style={styles.container}>
-        <BottomTab />
-      </View>
+    <View style={styles.container} >
+        <Navigation />
+    </View>
     );
   }
 }

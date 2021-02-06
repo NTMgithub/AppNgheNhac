@@ -9,6 +9,7 @@ import SongComponent from "./SongComponent";
 
 class ListSongsComponent extends Component{
     render(){
+        const {navigation} = this.props;
         //Ham tao list theo data truyen vao
         const createList = (data) =>{
             var Lists = data.map((songD) =>
@@ -17,6 +18,8 @@ class ListSongsComponent extends Component{
                     imageurl={songD.imageUrl}  
                     titlesong={songD.titlesong}
                     artistsong={songD.artistsong}  
+
+                    navigation = {navigation}
                 />
             )
             return Lists;
@@ -31,7 +34,8 @@ class ListSongsComponent extends Component{
                 {createList(this.props.data)}
 
                 </ScrollView>
-                <TouchableOpacity style={ListSongsComponentStyles.buttonXemThem}>
+                <TouchableOpacity style={ListSongsComponentStyles.buttonXemThem}
+                >
                     <Text style={ListSongsComponentStyles.textXemThem}>Xem thêm</Text>
                 </TouchableOpacity>
             </View>

@@ -12,8 +12,9 @@ class Slider extends Component{
     render(){
         const createList = (data)=>{
             var Lists = data.map((dataD) =>
-                <View>
-                    <Image source={dataD.imageUrl}
+                <View key={dataD.id}>
+                    <Image 
+                        source={dataD.imageUrl}
                         style={SliderStyles.sliderImage}
                     />
                 </View>

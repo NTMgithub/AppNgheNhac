@@ -3,12 +3,13 @@ import {
     ScrollView,
 } from "react-native";
 
+import "react-native-gesture-handler";
+
 import Header from "../Header/Header";
 import Slider from "../Slider/Slider";
 import ShortcutIcons from "../ShortcutIcons/ShortcutIcons";
 import ListComponents from "../ListComponents/ListComponents";
 import ListSongsComponent from "../ListSongsComponent/ListSongsComponent";
-
 import ArtistListComponent from "../ArtistListComponent/ArtistListComponent";
 
 // data example
@@ -92,9 +93,9 @@ const sliderData = [
     },
 ];
 
-
 class Home extends Component{
     render(){
+        const {navigation} = this.props;
         return (
             <ScrollView 
                 showsHorizontalScrollIndicator={false}
@@ -106,12 +107,14 @@ class Home extends Component{
                 <ShortcutIcons />
                 <ListComponents titlelist='Red Velvet hay nhất' data={albumData} />
 
-                <ListSongsComponent titlelist='Bài hát nghe nhiều' data={songData} />
+                <ListSongsComponent titlelist='Bài hát nghe nhiều' data={songData} navigation={navigation} />
 
                 <ListComponents titlelist='Playlist thư giãn' data={albumData} />
                 <ListComponents titlelist='Indie Việt toàn tập' data={albumData} />
 
                 <ArtistListComponent titlelist='Nghệ sĩ yêu thích' data={artistData} />
+
+   
             </ScrollView>
         );
     }
