@@ -10,27 +10,25 @@ import Swiper from "react-native-swiper";
 
 class Slider extends Component{
     render(){
+        const createList = (data)=>{
+            var Lists = data.map((dataD) =>
+                <View>
+                    <Image source={dataD.imageUrl}
+                        style={SliderStyles.sliderImage}
+                    />
+                </View>
+            )
+            return Lists;
+        };
         return(
             <View style={SliderStyles.container}>
             <Swiper 
-                //autoplay 
-                //autoplayTimeout={5}
+                autoplay 
+                autoplayTimeout={5}
             >
-                <View>
-                    <Image source={require('../../images/Slider/slider1.jpg')}
-                        style={SliderStyles.sliderImage}
-                    />
-                </View>
-                <View>
-                    <Image source={require('../../images/Slider/slider2.jpg')}
-                        style={SliderStyles.sliderImage}
-                    />
-                </View>
-                <View>
-                    <Image source={require('../../images/Slider/slider3.jpg')}
-                        style={SliderStyles.sliderImage}
-                    />
-                </View>
+
+            {createList(this.props.data)}
+                
             </Swiper>
             </View>
         );

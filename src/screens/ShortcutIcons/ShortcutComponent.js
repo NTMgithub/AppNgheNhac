@@ -6,7 +6,6 @@ import {
 
 import ShortcutIconsStyles from "./ShortcutIconsStyles";
 
-
 class ShortcutComponent extends Component{
     render(){
         return(

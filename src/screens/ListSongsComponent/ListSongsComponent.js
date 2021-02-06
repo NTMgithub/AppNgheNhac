@@ -7,31 +7,20 @@ import {
 import ListSongsComponentStyles from "./ListSongsComponentStyles";
 import SongComponent from "./SongComponent";
 
-
-const dataSong = {
-
-    song1: {
-        imageurl: require('../../images/songs/DiVeNha.jpg'),
-        titlesong: "Đi về nhà",
-        artist: "Đen Vâu, JustaTee"
-    },
-
-    song2: {
-        imageurl: require('../../images/songs/DomDom.jpg'),
-        titlesong: "Đom đóm",
-        artist: "Jack"
-    },
-
-    song3: {
-        imageurl: require('../../images/songs/NangTho.jpg'),
-        titlesong: "Nàng thơ",
-        artist: "Hoàng Dũng"
-    },
-    
-};
-
 class ListSongsComponent extends Component{
     render(){
+        //Ham tao list theo data truyen vao
+        const createList = (data) =>{
+            var Lists = data.map((songD) =>
+                <SongComponent 
+                    key={songD.id} 
+                    imageurl={songD.imageUrl}  
+                    titlesong={songD.titlesong}
+                    artistsong={songD.artistsong}  
+                />
+            )
+            return Lists;
+        };
         return(
             <View style={ListSongsComponentStyles.container}>
                 <Text style={ListSongsComponentStyles.TextTitle}>{this.props.titlelist}</Text>
@@ -39,52 +28,7 @@ class ListSongsComponent extends Component{
                     showsHorizontalScrollIndicator={false}
                     showsVerticalScrollIndicator={false}
                 >
-
-                <SongComponent 
-                    imageurl={dataSong.song1.imageurl} 
-                    titlesong={dataSong.song1.titlesong} 
-                    artistsong={dataSong.song1.artist}
-                />
-                <SongComponent 
-                    imageurl={dataSong.song2.imageurl} 
-                    titlesong={dataSong.song2.titlesong} 
-                    artistsong={dataSong.song2.artist}
-                />
-                <SongComponent 
-                    imageurl={dataSong.song3.imageurl} 
-                    titlesong={dataSong.song3.titlesong} 
-                    artistsong={dataSong.song3.artist}
-                />
-                <SongComponent 
-                    imageurl={dataSong.song1.imageurl} 
-                    titlesong={dataSong.song1.titlesong} 
-                    artistsong={dataSong.song1.artist}
-                />
-                <SongComponent 
-                    imageurl={dataSong.song2.imageurl} 
-                    titlesong={dataSong.song2.titlesong} 
-                    artistsong={dataSong.song2.artist}
-                />
-                <SongComponent 
-                    imageurl={dataSong.song3.imageurl} 
-                    titlesong={dataSong.song3.titlesong} 
-                    artistsong={dataSong.song3.artist}
-                />
-                <SongComponent 
-                    imageurl={dataSong.song1.imageurl} 
-                    titlesong={dataSong.song1.titlesong} 
-                    artistsong={dataSong.song1.artist}
-                />
-                <SongComponent 
-                    imageurl={dataSong.song2.imageurl} 
-                    titlesong={dataSong.song2.titlesong} 
-                    artistsong={dataSong.song2.artist}
-                />
-                <SongComponent 
-                    imageurl={dataSong.song3.imageurl} 
-                    titlesong={dataSong.song3.titlesong} 
-                    artistsong={dataSong.song3.artist}
-                />
+                {createList(this.props.data)}
 
                 </ScrollView>
                 <TouchableOpacity style={ListSongsComponentStyles.buttonXemThem}>
