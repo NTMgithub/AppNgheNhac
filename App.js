@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 
 import Navigation from "./src/screens/Navigation/Navigation";
+import PlayAudioScreen from "./src/screens/PlayAudioScreen/PlayAudioScreen";
 
 const widthDevice = Dimensions.get('window').width;
 const heightDevice = Dimensions.get('window').height;
