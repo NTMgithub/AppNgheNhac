@@ -15,10 +15,47 @@
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+
+    <script type="text/javascript" src="documentation/js/jquery-3.1.0.min.js"></script>
+
+    <!-- preloader -->
+    <style>
+      .preloader
+      {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        z-index: 9999;
+        text-align: center;
+        transition: opacity 0.3s linear;
+
+      }
+
+      .preloader-icon
+      {
+        position: relative;
+        top: 30%;
+        width: 300px;
+        border-radius: 50%;
+        animation: shake 1.5s infinite;
+      }
+    </style>
+
+    <script>
+      $(window).load(function(){
+          $('.preloader').fadeOut(); // set duration in brackets
+      });
+    </script>
+
     <title>ADMIN</title>
 </head>
 
 <body>
+    <!-- preloader -->
+    <div class="preloader"><img class="preloader-icon" src="preloader.gif" alt="My Site Preloader"> </div>
     <!-- ============================================================== -->
     <!-- main wrapper -->
     <!-- ============================================================== -->
@@ -109,4 +146,3 @@
         <!-- ============================================================== -->
         <!-- left sidebar -->
         <!-- ============================================================== -->
-        
