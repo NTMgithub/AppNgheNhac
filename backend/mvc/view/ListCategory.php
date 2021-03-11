@@ -309,16 +309,145 @@
                   
                 
                 <!-- nội dung ở đây -->
+             <!--Giao diện thể loại-->
+            <div class="input-group mb-3" style="margin: 1.2%">
+                <input type="text" class="form-control" placeholder="Tìm kiếm...">
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-primary">Tìm kiếm</button>
+                </div>
+
+                <div class="input-group-append" style="margin-left: 1%; margin-right: 8%;">
+                    <button type="button" class="btn btn-dark">Hiện tất cả</button>
+                </div>
+                <div class="input-group-append" style="margin-right: 2.5%;">
+                    <!--a href="#">
+                        <button type="button" class="btn btn-success"><span class="fas fa-plus"></span> Thêm</button>
+                    </a-->
 
 
+                     
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                            <div class="">
+                                                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                                            Thêm
+                                                        </a>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+                                                    <div class="modal-dialog" role="document">
+                            <div class="card">
+                                <h5 class="card-header">THÊM THỂ LOẠI</h5>
+                                <div class="card-body">
+                                    <form id="form" data-parsley-validate="" novalidate="">
+                                        <div class="form-group row">
+                                            <label for="inputEmail2" class="col-3 col-lg-2 col-form-label text-right">Thể loại</label>
+                                            <div class="col-9 col-lg-10">
+                                                <input id="inputEmail2" type="" required="" data-parsley-type="email" placeholder="Thể loại" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row pt-2 pt-sm-5 mt-1">
+                                            <div class="col-sm-6 pl-0">
+                                                <!--p class="text-right"-->
+                                                <div class="modal-footer">
+                                                        <a href="#" class="btn btn-primary">Lưu</a>
+                                                        <a href="#" class="btn btn-secondary" data-dismiss="modal">Hủy</a>
+                                                        <!--a href="#" class="btn btn-primary">Save changes</a-->
+                                                </div>
+                                                    <!--button type="submit" class="btn btn-space btn-primary">Submit</button>
+                                                    <button class="btn btn-space btn-secondary">Cancel</button-->
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                    </div>
+                                                </div>
+                                            </div>
+                                </div>
 
-
+                </div>
 
             </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                            <div class="card">
+                                <h5 class="card-header">Thể loại bài hát</h5>
+                                <div class="card-body">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Mã thể loại</th>
+                                                <th scope="col">Tên thể loại</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>
+                                                    <a href="#">
+                                                        <button type="button" class="btn btn-warning"><span
+                                                              class="fas fa-edit"></span> Sửa</button>
+                                                    </a>
+                                                    <a href="#" style="margin-left: 5%;">
+                                                        <button type="button" class="btn btn-danger"><span
+                                                              class="fas fa-times-circle"></span> Xóa</button>
+                                                    </a>
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>
+                                                    <a href="#">
+                                                        <button type="button" class="btn btn-warning"><span
+                                                                class="fas fa-edit"></span> Sửa</button>
+                                                    </a>
+                                                    <a href="#" style="margin-left: 5%;">
+                                                        <button type="button" class="btn btn-danger"><span
+                                                                class="fas fa-times-circle"></span> Xóa</button>
+                                                    </a>
+                                        
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry</td>
+                                                <td>
+                                                    <a href="#">
+                                                        <button type="button" class="btn btn-warning"><span
+                                                                class="fas fa-edit"></span> Sửa</button>
+                                                    </a>
+                                                    <a href="#" style="margin-left: 5%;">
+                                                        <button type="button" class="btn btn-danger"><span
+                                                                class="fas fa-times-circle"></span> Xóa</button>
+                                                    </a>
+                                                
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <nav aria-label="Page navigation example" style="margin: 1.3%">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#">Trang trước</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link " href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Trang sau</a></li>
+                                    </ul>
+                                 </nav>
+                            </div>
+                 </div>
+
+
+
+
+        </div>
 
            
             
-        </div>
+    </div>
         <!-- ============================================================== -->
         <!-- end wrapper  -->
         <!-- ============================================================== -->
