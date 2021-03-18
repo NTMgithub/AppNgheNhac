@@ -18,7 +18,7 @@
 
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="Home.php" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-user-circle"></i>Trang chủ</a>
+                                <a class="nav-link active" href="" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-user-circle"></i>Trang chủ</a>
                                 
                             </li>
 
