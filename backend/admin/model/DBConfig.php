@@ -80,5 +80,26 @@ class Database
         $sql="DELETE FROM $tableName WHERE $tableId='$id' ";
         return $this->execute($sql);
     }
+
+    //Hàm nối URL GET METHOD
+                           
+    //$parameter = "category=1";                            
+
+    public function mergeURL($parameter){
+        $url = $_SERVER['REQUEST_URI'];
+        $query = parse_url($url, PHP_URL_QUERY);
+
+        // Returns a string if the URL has parameters or NULL if not
+        if ($query) {
+            $url .= '&'.$parameter;
+            return $url;
+        } else {
+            $url .= '?'.$parameter;
+            return $url;
+        }
+    }
+        
+
+
 }
 
